@@ -29,9 +29,8 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var connection = Configuration.GetConnectionString("Dev");
-            services.AddDbContext<libroDbContext>
-                (options => options.UseSqlServer(connection));
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=LibroDb;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<libroDbContext>(options => options.UseSqlServer(connection));
 
             services.AddTransient<ILibroService, LibroService>();
 

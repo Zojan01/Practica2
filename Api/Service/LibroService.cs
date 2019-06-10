@@ -10,12 +10,12 @@ namespace Service
 {
     public interface ILibroService
     {
-        IEnumerable<Libro> GetAll(Libro model);
+        IEnumerable<Libro> GetAll();
         bool Add(Libro model);
         bool Update(Libro model);
         bool Delete(int id);
         Libro Get(int id);
-        object GetAll();
+        
     }   
     public class LibroService : ILibroService
     {
@@ -27,7 +27,7 @@ namespace Service
         }
 
             
-        public IEnumerable<Libro> GetAll(Libro model)
+        public IEnumerable<Libro> GetAll()
         {
             var result = new List<Libro>();
             try
@@ -108,9 +108,6 @@ namespace Service
             return true;
         }
 
-        public object GetAll()
-        {
-            throw new NotImplementedException();
-        }
+     
     }
 }
