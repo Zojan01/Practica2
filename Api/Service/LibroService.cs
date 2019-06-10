@@ -29,6 +29,7 @@ namespace Service
             
         public IEnumerable<Libro> GetAll()
         {
+
             var result = new List<Libro>();
             try
             {
