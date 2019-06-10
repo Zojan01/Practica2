@@ -6,6 +6,7 @@ namespace Model
 {
     public class Libro
     {
+        String p = "";
         public int libroID { get; set; }
         public String nombre { get; set; }
         public String autor { get; set; }
