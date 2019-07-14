@@ -12,6 +12,8 @@ namespace Model
         public String autor { get; set; }
         public String descripcion { get; set; }
 
+
+
         public int precio { get; set; }
 
     }

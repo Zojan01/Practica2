@@ -26,7 +26,10 @@ namespace Service
             _libroDbContext = libroDbContext;
         }
 
-            
+            /// <summary>
+            /// Devuelve todos los libros almacenados
+            /// </summary>
+            /// <returns></returns>
         public IEnumerable<Libro> GetAll()
         {
 
@@ -42,6 +45,11 @@ namespace Service
             return result;
         }
 
+        /// <summary>
+        /// Al ingresar el id, nos devuelve la informacion del libro que ingresamos
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Libro Get(int id)
         {
             var result = new Libro();   
@@ -55,7 +63,13 @@ namespace Service
             }
             return result;
         }
+        
 
+        /// <summary>
+        /// Se podra agregar el libro ingresando los parametros correctos
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public bool Add(Libro model)
         {
             try
@@ -71,7 +85,11 @@ namespace Service
             return true;
         }
 
-
+        /// <summary>
+        /// Metodo para poder actualizar el libro
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public bool Update(Libro model)
         {
             try
@@ -93,7 +111,11 @@ namespace Service
             }
             return true;
         }
-
+        /// <summary>
+        /// Servira para eliminar el libro por medio del ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Delete(int id)
         {
             try
