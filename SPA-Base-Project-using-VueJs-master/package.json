@@ -53,7 +53,7 @@
     "jest": "^21.2.0",
     "vue-jest": "^1.0.2",
     "node-notifier": "^5.1.2",
-    "chromedriver": "^2.27.2",
+    "chromedriver": "^119.0.1",
     "cross-spawn": "^5.0.1",
     "nightwatch": "^0.9.12",
     "selenium-server": "^3.0.1",
